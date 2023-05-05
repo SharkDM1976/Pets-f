@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  color: white;
+  background: forestgreen linear-gradient(0deg, #00964a, #0000009c);
+  margin: 0;
+  max-width: 100%;
+  padding: 1rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  color: white;
+  background: forestgreen linear-gradient(180deg, #00964a, #0000009c);
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  font-size: 1rem;
+  border-radius: 0;
+  align-content: end;
+  background: forestgreen linear-gradient(0deg, #00964a, #0000009c);
+  padding: .5rem;
+  border: 0;
+}
+.btn:hover {
+  background: forestgreen linear-gradient(0deg, #0000009c, #00964a);
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+
+  h2, h4, h5 {
+    font-family: "Book Antiqua", sans-serif;
+    align-content: center;
+    margin-left: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-top: 16px;
+    color: white;
+    border-color: aliceblue;
+    border-radius: .5px;
+    background: forestgreen linear-gradient(180deg, #00964a, #0000009c);
+    padding: 4px;
+    border-width: 1px;
+    width: 100%;
+  }
+  .btn:hover {
+    background: forestgreen linear-gradient(180deg, #0000009c, #00964a);
+  }
+}
+
+.form-control {
+  display: flex;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+
+  input {
+    margin-bottom: 0;
+  }
+
+  .validation {
+    color: red;
+  }
+
+}
+
+h2, h4, h5 {
+  font-family: "Book Antiqua", sans-serif;
+  align-content: center;
+  margin-left: 13px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.shadow-green{
+  text-shadow: 4px 4px 4px #40404d;
+}
+
+.shadow-white{
+  text-shadow: 4px 4px 4px #cccccc;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

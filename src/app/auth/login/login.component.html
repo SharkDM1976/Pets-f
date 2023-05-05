@@ -1,0 +1,51 @@
+<div class="container">
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+    <h2 class="shadow-white">Авторизация</h2>
+
+    <div class="card-warning" *ngIf="message">
+      {{message}}
+    </div>
+
+    <div class="form-control">
+      <label>Имя пользователя</label>
+      <input type="text" placeholder="username" formControlName="username">
+
+      <div
+        *ngIf="form.get('username').invalid && form.get('username').touched"
+        class="validation"
+      >
+        <small *ngIf="form.get('username').errors['required']">
+          Поле username не может быть пустым
+        </small>
+
+        <small *ngIf="form.get('username').errors['email']">
+          Введите корректное имя пользователя
+        </small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label>Пароль</label>
+      <input type="password" placeholder="Пароль" formControlName="password">
+
+      <div
+        *ngIf="form.get('password').invalid && form.get('password').touched"
+        class="validation"
+      >
+        <small *ngIf="form.get('password').errors['required']">
+          Пароль не может быть пустым
+        </small>
+
+        <small *ngIf="form.get('password').errors['minlength']">
+          Длина должна быть не менее {{form.get('password').errors['minlength']['requiredLength']}}.
+          Сейчас количество символов {{form.get('password').errors['minlength']['actualLength']}}
+        </small>
+      </div>
+    </div>
+
+    <button class="btn" type="submit" [disabled]="form.invalid">Войти</button>
+  </form>
+</div>
+
+
+
